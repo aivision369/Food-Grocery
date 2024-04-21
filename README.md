@@ -8,13 +8,13 @@
 <h3>📚 Sections: </h3>
 
 
-    ✍️**Home**: Explore featured items and promotions.
-    ✍️**Category**: Browse through different categories of groceries.
-    ✍️**Cart**: View and manage items added to the cart.
-    ✍️**History**: Review past orders and order details.
-    ✍️**Check Out/ Place Order**: Complete the order process securely.
-    ✍️**Item Detail**: View detailed information about a specific item.
-    ✍️**Profile**: Manage account settings and preferences.
+    ✍️ Home : Explore featured items and promotions.
+    ✍️ Category: Browse through different categories of groceries.
+    ✍️ Cart: View and manage items added to the cart.
+    ✍️ History: Review past orders and order details.
+    ✍️ Check Out/ Place Order: Complete the order process securely.
+    ✍️ Item Detail: View detailed information about a specific item.
+    ✍️ Profile: Manage account settings and preferences.
 ---
 <h3>⭐Key Features:</h3>
 
@@ -29,9 +29,26 @@
 <p>We welcome contributions from the community! If you'd like to contribute to the project. If any update required then please let me know</p>
 
 ---
+<h3>High Light of the apps: </h3>
+<p>Below is the small high light through screenshort of the app.</p>
+<p float="left">
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/1_welcome.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/2_authentication.png" width="200" /> 
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/3_home_1.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/3_home_2.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/8_detail.png" width="200" /> 
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/4_cateory_1.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/5_cart.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/6_history.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/7_profile.png" width="200" />
+</p>
+
+
+
+---
 <h3>📄 License: </h3>
 
-This profile is provided under MIT License. See [Here](https://github.com/IDFDeveloper/flutter.shailesh.porfolio/blob/master/LICENSE). 
+This profile is provided under MIT License. 
 
 ---
 Please contact me at limbadiya.sk@gmail.com if you have any feedback for the App. ⭐ Star it, if you like it!
