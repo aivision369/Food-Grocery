@@ -29,7 +29,7 @@
 <p>We welcome contributions from the community! If you'd like to contribute to the project. If any update required then please let me know</p>
 
 ---
-<h3>High Light of the apps: </h3>
+<h3>High Light of the app: </h3>
 <p>Below is the small high light through screenshort of the app.</p>
 <p float="left">
   <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/1_welcome.png" width="200" />
