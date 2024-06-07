@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/screens/welcome_screen.dart';
+import 'package:get/get.dart';
 
 import '../constants.dart';
 
@@ -17,9 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(
-        Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const WelcomeScreen())));
+        const Duration(seconds: 3), () => Get.off(const WelcomeScreen()));
   }
 
   @override

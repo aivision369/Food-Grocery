@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grocery/model/history_model.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 
 class HistoryItem extends StatefulWidget {
   const HistoryItem({Key? key, required this.item}) : super(key: key);
@@ -43,7 +44,7 @@ class _HistoryItemState extends State<HistoryItem> {
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Text(
-                  "Detail",
+                  AppString.lblDetail,
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w900,
@@ -84,7 +85,7 @@ class _HistoryItemState extends State<HistoryItem> {
                   Row(
                     children: [
                       Text(
-                        "Quantity : ",
+                        AppString.lblQuantity,
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w500,

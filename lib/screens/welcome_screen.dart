@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/screens/register_screen.dart';
+import 'package:get/get.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class WelcomeScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8),
                     child: Text(
-                      "Get your foods delivered to your home",
+                      AppString.welcomeTitle,
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -57,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 32),
                     child: Text(
-                      "The best delivery app in town for delivering your daily fresh food groceries",
+                      AppString.welcomeDes,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
@@ -72,8 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                     widthFactor: 0.5,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(
-                            context, RegistrationScreen.routeName);
+                        Get.toNamed(RegistrationScreen.routeName);
                       },
                       style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
@@ -82,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
                         shape: StadiumBorder(),
                         backgroundColor: kPrimaryColor,
                       ),
-                      child: Text("Shop Now"),
+                      child: const Text(AppString.btnShopNow),
                     ),
                   ),
                 ],

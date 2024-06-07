@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/model/cart_item_model.dart';
+import 'package:flutter_grocery/widget/CAppBar.dart';
 import 'package:flutter_grocery/widget/cart_item.dart';
+import 'package:get/get.dart';
 
 import '../../constants.dart';
+import '../../strings.dart';
 import '../check_out_screen.dart';
 
 class CartScreen extends StatefulWidget {
@@ -18,25 +21,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Cart",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Image.asset(
-            "assets/images/back_icon.png",
-            scale: 2.2,
-          ),
-        ),
-      ),
+      appBar:CAppBar(title: AppString.lblCart,),
       body: Stack(
         children: [
           Container(
@@ -67,13 +52,13 @@ class _CartScreenState extends State<CartScreen> {
                   widthFactor: 1,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, CheckOutScreen.routeName);
+                      Get.toNamed(CheckOutScreen.routeName);
                     },
                     style: TextButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 16.0),
                         shape: StadiumBorder(),
                         backgroundColor: kPrimaryColor),
-                    child: Text("CheckOut"),
+                    child: const Text(AppString.lblCheckOut),
                   ),
                 )
               ],

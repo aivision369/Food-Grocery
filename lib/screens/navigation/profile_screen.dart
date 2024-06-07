@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_grocery/screens/register_screen.dart';
 import 'package:flutter_grocery/widget/alert_dialog_two_action.dart';
+import 'package:get/get.dart';
 
 import '../../constants.dart';
+import '../../strings.dart';
 
 class ProfileScreen extends StatefulWidget {
   static String routeName = '/profile';
@@ -95,7 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             color: Colors.white),
                                       ),
                                       Text(
-                                        "Followers",
+                                        AppString.lblFollowers,
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
@@ -113,7 +116,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             color: Colors.white),
                                       ),
                                       Text(
-                                        "Following",
+                                        AppString.lblFollowing,
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
@@ -131,7 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             color: Colors.white),
                                       ),
                                       Text(
-                                        "Test Master",
+                                        AppString.lblTestMaster,
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
@@ -159,7 +162,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.redAccent,
               ),
               title: Text(
-                "Favorites",
+                AppString.lblFavorites,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -173,7 +176,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.redAccent,
               ),
               title: Text(
-                "Location",
+                AppString.lblLocation,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -187,7 +190,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.redAccent,
               ),
               title: Text(
-                "Shepping",
+                AppString.lblShipping,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -201,7 +204,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.redAccent,
               ),
               title: Text(
-                "Payment",
+                AppString.lblPayment,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -221,7 +224,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: Colors.redAccent,
                 ),
                 title: Text(
-                  "Logout",
+                  AppString.lblLogout,
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -238,10 +241,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   var dialog = CustomAlertDialogTwoAction(
     onNegativePressed: () {},
-    onPositivePressed: () {},
-    title: 'Alert!',
-    positiveBtnText: 'Logout',
-    message: 'Are you sure want to Logout ?',
-    negativeBtnText: 'Cancel',
+    onPositivePressed: () {
+      Get.offAll(const RegistrationScreen());
+    },
+    title: AppString.lblAlert,
+    positiveBtnText: AppString.lblLogout,
+    message: AppString.lblLogoutMsg,
+    negativeBtnText: AppString.lblCancel,
   );
 }

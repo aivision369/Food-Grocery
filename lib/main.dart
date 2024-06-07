@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_grocery/strings.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'routes.dart';
@@ -14,12 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Food Grocery',
+      title: AppString.appName,
       theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
       initialRoute: SplashScreen.routeName,
-      routes: routes,
+      getPages: routePages,
     );
   }
 }
+

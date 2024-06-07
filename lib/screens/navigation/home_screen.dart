@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grocery/widget/custom_alert_dialog.dart';
 import 'package:flutter_grocery/widget/home_slider.dart';
 import 'package:flutter_grocery/widget/vegetable_card.dart';
+import 'package:get/get.dart';
 
 import '../../constants.dart';
+import '../../strings.dart';
 import '../dashboard_screen.dart';
 import '../vegetable_detail_screen.dart';
 import '../vegetables_screen.dart';
@@ -18,9 +20,9 @@ class HomeScreen extends StatelessWidget {
 
   var dialog = CustomAlertDialog(
     onPositivePressed: () {},
-    title: 'Coming Your Way',
-    positiveBtnText: 'OK',
-    message: 'It will be available soon.Get Ready for...',
+    title: AppString.dialogTitle,
+    positiveBtnText: AppString.btnOK,
+    message: AppString.dialogDes,
   );
 
   @override
@@ -62,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                             height: 4,
                           ),
                           Text(
-                            "Indian Farmer",
+                            AppString.lblUser,
                             style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -90,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                             size: 16,
                           ),
                           Text(
-                            "My Home",
+                            AppString.lblMyHome,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 12,
@@ -122,7 +124,7 @@ class HomeScreen extends StatelessWidget {
                   textAlignVertical: TextAlignVertical.center,
                   decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Search Category",
+                      hintText: AppString.hintSearchCate,
                       hintStyle: TextStyle(
                           fontSize: 14,
                           color: Color(0xff979899),
@@ -143,8 +145,8 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
-                  _seeAllView(context, "Categories", () {
-                    if(tabIndex!=null) {
+                  _seeAllView(context, AppString.lblCategories, () {
+                    if (tabIndex != null) {
                       tabIndex!(1);
                       //state._changePage((state._currentIndex + 1) % state.widget.pages.length);
                       //navigationPosition!(1);
@@ -155,22 +157,24 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      _categoriesView("assets/images/fruits.png", "Fruits", () {
+                      _categoriesView(
+                          "assets/images/fruits.png", AppString.lblFruits, () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) => dialog);
+                      }),
+                      _categoriesView("assets/images/vegetables.png",
+                          AppString.lblVegetables, () {
+                            Get.toNamed(VegetablesScreen.routeName);
+                      }),
+                      _categoriesView(
+                          "assets/images/diary.png", AppString.lblDiary, () {
                         showDialog(
                             context: context,
                             builder: (BuildContext context) => dialog);
                       }),
                       _categoriesView(
-                          "assets/images/vegetables.png", "Vegetables", () {
-                        Navigator.pushNamed(
-                            context, VegetablesScreen.routeName);
-                      }),
-                      _categoriesView("assets/images/diary.png", "Diary", () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) => dialog);
-                      }),
-                      _categoriesView("assets/images/organic.png", "Organic",
+                          "assets/images/organic.png", AppString.lblOrganic,
                           () {
                         showDialog(
                             context: context,
@@ -181,8 +185,9 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 32,
                   ),
-                  _seeAllView(context, "Best Selling", () {
-                    Navigator.pushNamed(context, VegetablesScreen.routeName);
+                  _seeAllView(context, AppString.lblBestSelling, () {
+                    Get.toNamed(VegetablesScreen.routeName);
+                    //Navigator.pushNamed(context, VegetablesScreen.routeName);
                   }),
                   SizedBox(
                     height: 24,
@@ -197,8 +202,7 @@ class HomeScreen extends StatelessWidget {
                             name: "Bell Pepper Red",
                             price: "1kg, 40 \u20B9",
                             onClick: () {
-                              Navigator.pushNamed(
-                                  context, VegetableDetailScreen.routeName);
+                              Get.toNamed(VegetableDetailScreen.routeName);
                             }),
                       ),
                       Expanded(
@@ -207,8 +211,7 @@ class HomeScreen extends StatelessWidget {
                             name: "Organic Carrots",
                             price: "1kg, 50 \u20B9",
                             onClick: () {
-                              Navigator.pushNamed(
-                                  context, VegetableDetailScreen.routeName);
+                              Get.toNamed(VegetableDetailScreen.routeName);
                             }),
                       ),
                     ],
@@ -227,11 +230,11 @@ class HomeScreen extends StatelessWidget {
     int hour = now.hour;
     String greetingMessage = '';
     if (hour >= 0 && hour < 12) {
-      greetingMessage = 'Good Morning';
+      greetingMessage = AppString.messageG;
     } else if (hour >= 12 && hour < 18) {
-      greetingMessage = 'Good Afternoon';
+      greetingMessage = AppString.messageA;
     } else {
-      greetingMessage = 'Good Evening';
+      greetingMessage = AppString.messageE;
     }
     return greetingMessage;
   }
@@ -251,7 +254,7 @@ class HomeScreen extends StatelessWidget {
             //Navigator.pushNamed(context, VegetablesScreen.routeName);
           },
           child: Text(
-            "See All",
+            AppString.lblSeeAll,
             style: TextStyle(
                 fontSize: 14,
                 color: kPrimaryColor,

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 import 'navigation/cart_screen.dart';
 import 'navigation/category_screen.dart';
 import 'navigation/history_screen.dart';
@@ -36,15 +38,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:
-            /*PageStorage(
-          bucket: PageStorageBucket(),
-          child: pages[currentTab],
-        ),*/
-            IndexedStack(
+        body: IndexedStack(
           index: currentTab,
           children: [
-            HomeScreen(tabIndex:changeTab),
+            HomeScreen(tabIndex: changeTab),
             CategoryScreen(),
             HistoryScreen(),
             ProfileScreen(),
@@ -57,7 +54,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Icons.add_shopping_cart,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, CartScreen.routeName);
+            Get.toNamed(CartScreen.routeName);
           },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -94,7 +91,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   currentTab == 0 ? kPrimaryColor : Colors.grey,
                             ),
                             Text(
-                              "Home",
+                              AppString.home,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: currentTab == 0
@@ -126,7 +123,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   currentTab == 1 ? kPrimaryColor : Colors.grey,
                             ),
                             Text(
-                              "Category",
+                              AppString.category,
                               style: TextStyle(
                                 color: currentTab == 1
                                     ? kPrimaryColor
@@ -159,7 +156,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   currentTab == 2 ? kPrimaryColor : Colors.grey,
                             ),
                             Text(
-                              "History",
+                              AppString.history,
                               style: TextStyle(
                                 color: currentTab == 2
                                     ? kPrimaryColor
@@ -189,7 +186,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   currentTab == 3 ? kPrimaryColor : Colors.grey,
                             ),
                             Text(
-                              "Profile",
+                              AppString.profile,
                               style: TextStyle(
                                 color: currentTab == 3
                                     ? kPrimaryColor

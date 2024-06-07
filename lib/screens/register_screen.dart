@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 import 'dashboard_screen.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -20,7 +22,7 @@ class RegistrationScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: InkWell(
-            onTap: () => Navigator.pop(context),
+            onTap: () => Get.back(),
             child: Image.asset(
               "assets/images/back_icon.png",
               scale: 2.2,
@@ -52,7 +54,7 @@ class RegistrationScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8),
                     child: Text(
-                      "Enter your mobile number",
+                      AppString.loginLbl,
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -64,7 +66,7 @@ class RegistrationScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8),
                     child: Text(
-                      "Will send a verification code to verify your number",
+                      AppString.loginDes,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 12,
@@ -89,14 +91,14 @@ class RegistrationScreen extends StatelessWidget {
                       textAlignVertical: TextAlignVertical.center,
                       decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: "0123456789",
+                          hintText: AppString.mobileHint,
                           hintStyle: TextStyle(
                               fontSize: 24,
                               color: Color(0xffE0E0E0),
                               fontWeight: FontWeight.bold),
                           contentPadding: EdgeInsets.symmetric(horizontal: 16),
                           prefix: Text(
-                            "+91",
+                            AppString.countryCode,
                             style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
@@ -117,9 +119,7 @@ class RegistrationScreen extends StatelessWidget {
                   widthFactor: 1,
                   child: ElevatedButton(
                     onPressed: () {
-                      print(
-                          "On Continue button pressed form registration screen");
-                      Navigator.pushNamed(context, DashboardScreen.routeName);
+                      Get.offAll(DashboardScreen());
                     },
                     style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
@@ -127,7 +127,7 @@ class RegistrationScreen extends StatelessWidget {
                             fontSize: 14, fontWeight: FontWeight.w500),
                         shape: StadiumBorder(),
                         backgroundColor: kPrimaryColor),
-                    child: Text("Continue"),
+                    child: Text(AppString.btnContinue),
                   ),
                 ),
                 SizedBox(
@@ -139,14 +139,14 @@ class RegistrationScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                         text:
-                            "By clicking on \"Continue\" you are agree to our",
+                            AppString.termsStatement1,
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Color(0xffA9A9AA),
                             fontSize: 12),
                         children: [
                           TextSpan(
-                              text: "terms of use",
+                              text: AppString.termsStatement2,
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
                                   fontWeight: FontWeight.w600,

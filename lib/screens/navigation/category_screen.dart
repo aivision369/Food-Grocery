@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/screens/vegetables_screen.dart';
+import 'package:flutter_grocery/widget/CAppBar.dart';
+import 'package:flutter_grocery/widget/CAppBarTitle.dart';
 import 'package:flutter_grocery/widget/custom_alert_dialog.dart';
+import 'package:get/get.dart';
+
+import '../../strings.dart';
 
 class CategoryScreen extends StatelessWidget {
   static String routeName = "/category";
@@ -10,24 +15,15 @@ class CategoryScreen extends StatelessWidget {
 
   var dialog = CustomAlertDialog(
     onPositivePressed: () {},
-    title: 'Coming Your Way',
-    positiveBtnText: 'OK',
-    message: 'It will be available soon.Get Ready for...',
+    title: AppString.dialogTitle,
+    positiveBtnText: AppString.btnOK,
+    message: AppString.dialogDes,
   );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        elevation: 0.0,
-        title: Text(
-          "Categories",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-      ),
+      appBar: CAppBarTitle(title: AppString.lblCategories,),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -45,7 +41,7 @@ class CategoryScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _categoriesView("assets/images/fruits.png", "Fruits", () {
+                      _categoriesView("assets/images/fruits.png", AppString.lblFruits, () {
                         showDialog(
                             context: context,
                             builder: (BuildContext context) => dialog);
@@ -54,9 +50,8 @@ class CategoryScreen extends StatelessWidget {
                         width: 8,
                       ),
                       _categoriesView(
-                          "assets/images/vegetables.png", "Vegetables", () {
-                        Navigator.pushNamed(
-                            context, VegetablesScreen.routeName);
+                          "assets/images/vegetables.png", AppString.lblVegetables, () {
+                        Get.toNamed(VegetablesScreen.routeName);
                       }),
                     ],
                   ),
@@ -66,7 +61,7 @@ class CategoryScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _categoriesView("assets/images/diary.png", "Diary", () {
+                      _categoriesView("assets/images/diary.png", AppString.lblDiary, () {
                         showDialog(
                             context: context,
                             builder: (BuildContext context) => dialog);
@@ -74,7 +69,7 @@ class CategoryScreen extends StatelessWidget {
                       SizedBox(
                         width: 8,
                       ),
-                      _categoriesView("assets/images/organic.png", "Organic",
+                      _categoriesView("assets/images/organic.png", AppString.lblOrganic,
                           () {
                         showDialog(
                             context: context,
@@ -84,25 +79,6 @@ class CategoryScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 16,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _categoriesView("assets/images/burger.png", "Burger", () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) => dialog);
-                      }),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      _categoriesView(
-                          "assets/images/red_chilly.png", "Red Chilly", () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) => dialog);
-                      }),
-                    ],
                   ),
                 ],
               ),

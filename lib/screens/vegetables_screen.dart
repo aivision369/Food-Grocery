@@ -4,6 +4,7 @@ import 'package:flutter_grocery/model/vegetable_data.dart';
 import 'package:flutter_grocery/widget/vegetable_card.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 
 class VegetablesScreen extends StatelessWidget {
   static String routeName = "/vegetables";
@@ -18,7 +19,7 @@ class VegetablesScreen extends StatelessWidget {
         backgroundColor: Colors.white70,
         centerTitle: true,
         title: Text(
-          "Vegetables",
+          AppString.lblVegetables,
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         ),
@@ -46,7 +47,7 @@ class VegetablesScreen extends StatelessWidget {
                 textAlignVertical: TextAlignVertical.center,
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: "Search here...",
+                  hintText: AppString.hintSearHere,
                   hintStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grocery/screens/navigation/cart_screen.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 
 class VegetableDetailScreen extends StatefulWidget {
   static String routeName = "/vegetableDetail";
@@ -213,7 +214,7 @@ class _VegetableDetailScreenState extends State<VegetableDetailScreen> {
                         shape: StadiumBorder(),
                         backgroundColor: Color(0xff23AA49),
                       ),
-                      child: Text("Add In Bucket"),
+                      child: Text(AppString.lblAddToBucket),
                     ),
                   )
                 ],

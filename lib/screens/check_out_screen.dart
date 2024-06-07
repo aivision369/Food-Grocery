@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_grocery/widget/CAppBar.dart';
 
 import '../constants.dart';
+import '../strings.dart';
 
 class CheckOutScreen extends StatefulWidget {
   static String routeName = "/checkout";
@@ -27,9 +29,10 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
     ];
 
     return Scaffold(
-      appBar: AppBar(
+      appBar: CAppBar(title: AppString.lblCheckOut,),
+      /*AppBar(
         title: Text(
-          "CheckOut",
+          AppString.lblCheckOut,
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black),
         ),
@@ -43,7 +46,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             scale: 2.0,
           ),
         ),
-      ),
+      ),*/
       body: Container(
         color: Colors.white,
         height: double.infinity,
@@ -54,7 +57,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               SizedBox(
                 height: 10,
               ),
-              _leftRightLabel("Your Items", "ViewAll"),
+              _leftRightLabel(AppString.lblYourItems, AppString.lblViewAll),
               SizedBox(
                 height: 8,
               ),
@@ -85,7 +88,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               SizedBox(
                 height: 40,
               ),
-              _leftRightLabel("Your Address", "Edit Address"),
+              _leftRightLabel(AppString.lblAddress, AppString.lblEditAddress),
               SizedBox(
                 height: 10,
               ),
@@ -106,7 +109,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  "Delivery Time",
+                  AppString.lblDeliveryTime,
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -129,7 +132,8 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               SizedBox(
                 height: 40,
               ),
-              _leftRightLabel("Payment Options", "View All"),
+              _leftRightLabel(
+                  AppString.lblPaymentOptions, AppString.lblViewAll),
               SizedBox(height: 20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -216,7 +220,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             textAlignVertical: TextAlignVertical.center,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "Add your voucher",
+                                hintText: AppString.hintAddYourVoucher,
                                 suffixIcon: IconButton(
                                   onPressed: () {},
                                   icon: Icon(
@@ -252,7 +256,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 height: 10,
                               ),
                               Text(
-                                "Total",
+                                AppString.lblTotal,
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -288,7 +292,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                               shape: StadiumBorder(),
                               backgroundColor: kPrimaryColor),
                           child: Text(
-                            "Pay Now",
+                            AppString.btnPayNow,
                           ),
                         ),
                       ),
@@ -296,7 +300,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 10,)
+              SizedBox(
+                height: 10,
+              )
               /*Expanded(
                 child: Row(),
               ),*/

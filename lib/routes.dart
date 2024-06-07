@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_grocery/screens/register_screen.dart';
+import 'package:get/get.dart';
 
 import 'screens/check_out_screen.dart';
 import 'screens/dashboard_screen.dart';
@@ -13,17 +14,19 @@ import 'screens/vegetable_detail_screen.dart';
 import 'screens/vegetables_screen.dart';
 import 'widget/home_slider.dart';
 
-final Map<String, WidgetBuilder> routes = {
-  SplashScreen.routeName: (context) => const SplashScreen(),
-  RegistrationScreen.routeName: (context) => const RegistrationScreen(),
-  DashboardScreen.routeName: (context) => const DashboardScreen(),
-  VegetablesScreen.routeName: (context) => const VegetablesScreen(),
-  HomeScreen.routeName: (context) => HomeScreen(),
-  CategoryScreen.routeName: (context) => CategoryScreen(),
-  HistoryScreen.routeName: (context) => const HistoryScreen(),
-  ProfileScreen.routeName: (context) => const ProfileScreen(),
-  CartScreen.routeName: (context) => const CartScreen(),
-  VegetableDetailScreen.routeName: (context) => const VegetableDetailScreen(),
-  HomeSlider.routeName: (context) => const HomeSlider(),
-  CheckOutScreen.routeName: (context) => const CheckOutScreen(),
-};
+final routePages = [
+  GetPage(name: SplashScreen.routeName, page: () => SplashScreen()),
+  GetPage(name: RegistrationScreen.routeName, page: () => RegistrationScreen()),
+  GetPage(name: DashboardScreen.routeName, page: () => DashboardScreen()),
+  GetPage(name: VegetablesScreen.routeName, page: () => VegetablesScreen()),
+  GetPage(name: HomeScreen.routeName, page: () => HomeScreen()),
+  GetPage(name: CategoryScreen.routeName, page: () => CategoryScreen()),
+  GetPage(name: HistoryScreen.routeName, page: () => HistoryScreen()),
+  GetPage(name: CartScreen.routeName, page: () => CartScreen()),
+  GetPage(
+      name: VegetableDetailScreen.routeName,
+      page: () => VegetableDetailScreen()),
+  GetPage(name: HomeSlider.routeName, page: () => HomeSlider()),
+  GetPage(name: CheckOutScreen.routeName, page: () => CheckOutScreen()),
+  GetPage(name: ProfileScreen.routeName, page: () => ProfileScreen()),
+];
