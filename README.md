@@ -32,15 +32,16 @@
 <h3>High Light of the app: </h3>
 <p>Below is the small high light through screenshort of the app.</p>
 <p float="left">
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/1_welcome.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/2_authentication.png" width="200" /> 
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/3_home_1.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/3_home_2.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/8_detail.png" width="200" /> 
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/4_cateory_1.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/5_cart.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/6_history.png" width="200" />
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/7_profile.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_1" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_2.png" width="200" /> 
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_3.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_4.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_5.png" width="200" /> 
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_6.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_7.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_8.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_9.png" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_10.png" width="200" />
 </p>
 
 
