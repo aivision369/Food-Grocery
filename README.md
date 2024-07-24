@@ -32,7 +32,7 @@
 <h3>High Light of the app: </h3>
 <p>Below is the small high light through screenshort of the app.</p>
 <p float="left">
-  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_1" width="200" />
+  <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_1.png" width="200" />
   <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_2.png" width="200" /> 
   <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_3.png" width="200" />
   <img src="https://github.com/aivision369/Food-Grocery/blob/main/screenshort/pro_fg_4.png" width="200" />
